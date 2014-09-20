@@ -2,6 +2,9 @@
 <html>
     <head>
         <title>Photo Gallery</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="Stylesheet" type="text/css" href="/style.css">
+
         <!-- jQuery library (MANDATORY - but include it only once in your page) -->
         <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
@@ -9,72 +12,44 @@
         <link href="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/css/nanogallery.min.css" rel="stylesheet" type="text/css">
         <script type="text/javascript"
             src="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/jquery.nanogallery.min.js"></script>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-
+        <!--
         <script type="text/javascript" src="nanoGALLERY-master/third.party/jquery-1.7.1.min.js"></script>
         <link href="nanoGALLERY-master/css/nanogallery.css" rel="stylesheet" type="text/css">
         <link href="nanoGALLERY-master/css/themes/clean/nanogallery_clean.css" rel="stylesheet" type="text/css">
         <link href="nanoGALLERY-master/css/themes/light/nanogallery_light.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="nanoGALLERY-master/jquery.nanogallery.js"></script>
         <script type="text/javascript" src="nanoGALLERY-master/jquery.nanogallerydemo.js"></script>
+        -->
     </head>
     <body>
-        <div id="nanoGalleryMLN"></div>
-
-<script type="text/javascript">
-
-$(document).ready(function () {
-
-    var contentGalleryMLN=[
-      {
-        src: 'image/1.jpg',
-        srct: 'image/1_ts.jpg',
-        title: '2014.9.6',
-        description : '阳光入园',
-        ID:101,
-        kind:'album'
-      },
-      {
-        src: 'image/2.jpg',
-        srct: 'image/2.jpg',
-        title: '2014.9.7',
-        description : '阳光入园',
-        ID:102,
-        kind:'album'
-      },
-      {
-        src: 'image/3.jpg',
-        srct: 'image/3.jpg',
-        title: '2014.9.8',
-        description : '阳光入园',
-        ID:103,
-        kind:'album'
-      },
-      {src: 'image/2014.9.6/4.jpg',srct: 'image/2014.9.6/4.jpg',title: '1a',albumID: 101},
-      {src: 'image/2014.9.6/5.jpg',srct: 'image/2014.9.6/5.jpg',title: '1b',albumID: 101},
-      {src: 'image/2014.9.6/6.jpg',srct: 'image/2014.9.6/6.jpg',title: '1c',albumID: 101},
-
-      {src: 'image/2014.9.7/7.jpg',srct: 'image/2017.9.7/7.jpg',title: '2a',albumID: 102},
-      {src: 'image/2014.9.7/8.jpg',srct: 'image/2014.9.7/8.jpg',title: '2b',albumID: 102},
-      {src: 'image/2014.9.7/9.jpg',srct: 'image/2014.9.7/9.jpg',title: '2c',albumID: 102},
-
-      {src: 'image/2014.9.8/10.jpg',srct: 'image/20110.9.8/10.jpg',title: '3a',albumID: 103},
-      {src: 'image/2014.9.8/11.jpg',srct: 'image/2014.9.8/11.jpg',title: '3b',albumID: 103},
-      {src: 'image/2014.9.8/12.jpg',srct: 'image/2014.9.8/12.jpg',title: '3c',albumID: 103}
-      ];
-jQuery("#nanoGalleryMLN").nanoGallery({thumbnailWidth:120,thumbnailHeight:120,
-        items:contentGalleryMLN,
-        //paginationMaxItemsPerPage:3,
-        paginationMaxLinesPerPage:1,
-        thumbnailHoverEffect:[{name: 'imageScale150', duration:700}, {name:'labelAppear75', duration:400}, {name:'descriptionAppear', duration:1000}],
-        viewerDisplayLogo:true,
-        useTags:false,
-        locationHash:false,
-        maxItemsPerLine:5
-      });
-});
-</script>
+        <div id="nanoGallery"></div>
+        <div id="footer">
+            <div class="powered_by">
+                <span>Powered by <a href="https://github.com/Kris-B/nanoGALLERY" target="_blank">nanoGallery</a>.&nbsp&nbsp
+                Copyright © 2014 <a href="http://www.hdujsjqx.org">计算机青协</a><br>
+                If you don't want some photos to be shown here，please <a href="mailto:contact@hdujsjqx.org">contact us</a></span>
+            </div>  
+         </div>
     </body>
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#nanoGallery").nanoGallery({
+      kind: 'flickr',
+      userID:'126971148@N05',
+      
+      thumbnailL1Width:'140 xs100 sm100', thumbnailL1Height:'140 xs100 sm100',
+      
+      thumbnailWidth:'auto', thumbnailHeight:'200 xs80 sm150 la250 xl290',
+      
+      thumbnailHoverEffect:[{name: 'imageScale150', duration:700}, {name:'labelAppear75', duration:400}, {name:'descriptionAppear', duration:1000}],
+      paginationMaxLinesPerPage: 1,
+      imageTransition : 'slide',
+      thumbnailLabel:{ display:true, align:'center', position:'overImageOnMiddle' },
+      galleryFullpageButton: true
+    });
+  });
+  
+</script>
+    
 
 </html>
-
