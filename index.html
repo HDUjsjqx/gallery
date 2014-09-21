@@ -12,14 +12,6 @@
         <link href="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/css/nanogallery.min.css" rel="stylesheet" type="text/css">
         <script type="text/javascript"
             src="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/jquery.nanogallery.min.js"></script>
-        <!--
-        <script type="text/javascript" src="nanoGALLERY-master/third.party/jquery-1.7.1.min.js"></script>
-        <link href="nanoGALLERY-master/css/nanogallery.css" rel="stylesheet" type="text/css">
-        <link href="nanoGALLERY-master/css/themes/clean/nanogallery_clean.css" rel="stylesheet" type="text/css">
-        <link href="nanoGALLERY-master/css/themes/light/nanogallery_light.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="nanoGALLERY-master/jquery.nanogallery.js"></script>
-        <script type="text/javascript" src="nanoGALLERY-master/jquery.nanogallerydemo.js"></script>
-        -->
     </head>
     <body>
         <div id="nanoGallery"></div>
@@ -31,25 +23,22 @@
             </div>  
          </div>
     </body>
-<script type="text/javascript">
-$(document).ready(function () {
-    $("#nanoGallery").nanoGallery({
-      kind: 'flickr',
-      userID:'126971148@N05',
-      
-      thumbnailL1Width:'140 xs100 sm100', thumbnailL1Height:'140 xs100 sm100',
-      
-      thumbnailWidth:'auto', thumbnailHeight:'200 xs80 sm150 la250 xl290',
-      
-      thumbnailHoverEffect:[{name: 'imageScale150', duration:700}, {name:'labelAppear75', duration:400}, {name:'descriptionAppear', duration:1000}],
-      paginationMaxLinesPerPage: 1,
-      imageTransition : 'slide',
-      thumbnailLabel:{ display:true, align:'center', position:'overImageOnMiddle' },
-      galleryFullpageButton: true
-    });
-  });
-  
-</script>
-    
-
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $("#nanoGallery").nanoGallery({
+          kind: 'flickr',
+          userID:'126971148@N05',
+          
+          thumbnailL1Width:'200 xs100 sm100', thumbnailL1Height:'140 xs100 sm100',
+          
+          thumbnailWidth:'auto', thumbnailHeight:'200 xs80 sm150 la250 xl290',
+          
+          thumbnailHoverEffect:[{name: 'imageScale150', duration:700}, {name:'labelAppear75', duration:400}, {name:'descriptionAppear', duration:1000}],
+          paginationMaxLinesPerPage: 1,
+          imageTransition : 'slide',
+          thumbnailLabel:{ display:true, align:'center', position:'overImageOnMiddle' },
+          galleryFullpageButton: true
+        });
+      });
+    </script>
 </html>
