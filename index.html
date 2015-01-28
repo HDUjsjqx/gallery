@@ -1,44 +1,40 @@
-<DOCRYPE html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Photo Gallery</title>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <link rel="Stylesheet" type="text/css" href="/style.css">
+  <head>
+    <title>Photo Gallery</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="Stylesheet" type="text/css" href="./style.css">
 
-        <!-- jQuery library (MANDATORY - but include it only once in your page) -->
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- jQuery library (MANDATORY - but include it only once in your page) -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-        <!-- nanoGALLERY plugin files -->
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/css/nanogallery.min.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript"
-            src="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/jquery.nanogallery.min.js"></script>
-    </head>
-    <body>
-        <div id="nanoGallery"></div>
-        <div id="footer">
-            <div class="powered_by">
-                <span>Powered by <a href="https://github.com/Kris-B/nanoGALLERY" target="_blank">nanoGallery</a>.&nbsp&nbsp
-                Copyright © 2014 <a href="http://www.hdujsjqx.org">计算机青协</a><br>
-                If you don't want some photos to be shown here，please <a href="mailto:contact@hdujsjqx.org">contact us</a></span>
-            </div>  
-         </div>
-    </body>
-    <script type="text/javascript">
-    $(document).ready(function () {
-        $("#nanoGallery").nanoGallery({
-          kind: 'flickr',
-          userID:'126971148@N05',
-          
-          thumbnailL1Width:'200 xs100 sm100', thumbnailL1Height:'140 xs100 sm100',
-          
-          thumbnailWidth:'auto', thumbnailHeight:'200 xs80 sm150 la250 xl290',
-          
-          thumbnailHoverEffect:[{name: 'imageScale150', duration:700}, {name:'labelAppear75', duration:400}, {name:'descriptionAppear', duration:1000}],
-          paginationMaxLinesPerPage: 1,
-          imageTransition : 'slide',
-          thumbnailLabel:{ display:true, align:'center', position:'overImageOnMiddle' },
-          galleryFullpageButton: true
-        });
-      });
-    </script>
+    <!-- nanoGALLERY plugin files -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/css/nanogallery.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/jquery.nanogallery.min.js"></script>
+  </head>
+  <body>
+    <div id="nanoGallery"></div>
+    <div class="footer">
+      <div class="powered_by">
+        <span>Powered by <a href="https://github.com/Kris-B/nanoGALLERY" target="_blank">nanoGallery</a>.&nbsp&nbsp
+        Copyright © 2014-2015 <a href="http://www.hdujsjqx.org">计算机青协</a><br>
+        If you don't want some photos to be shown here，please <a href="mailto:contact@hdujsjqx.org">contact us</a>.</span>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $("#nanoGallery").nanoGallery({
+      kind: 'flickr',
+      userID:'126971148@N05',
+      thumbnailL1Width:'200 xs100 sm100', thumbnailL1Height:'140 xs100 sm100',
+      thumbnailWidth:'auto', thumbnailHeight:'200 xs80 sm150 la250 xl290',
+      thumbnailHoverEffect:[{name: 'imageScale150', duration:700}, {name:'labelAppear75', duration:400}, {name:'descriptionAppear', duration:1000}],
+      paginationMaxLinesPerPage: 1,
+      imageTransition : 'slide',
+      thumbnailLabel:{ display:true, align:'center', position:'overImageOnMiddle' },
+      galleryFullpageButton: true
+    });
+  });
+  </script>
 </html>
